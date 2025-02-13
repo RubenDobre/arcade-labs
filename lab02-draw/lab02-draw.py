@@ -63,7 +63,7 @@ arcade.draw_circle_filled(670, 445, 55, arcade.color.PINK_LACE)
 arcade.draw_circle_filled(730, 455, 55, arcade.color.PINK_LACE)
 arcade.draw_circle_filled(780, 445, 55, arcade.color.PINK_LACE)
 
-arcade.draw_ellipse_filled(500, 110, 300, 150, arcade.color.CHARCOAL, 0)
+arcade.draw_ellipse_filled(500, 110, 300, 150, arcade.color.DARK_JUNGLE_GREEN  , 0)
 
 arcade.draw_rectangle_filled(500, 150, 300, 90, arcade.color.SPACE_CADET)
 
@@ -71,10 +71,11 @@ arcade.draw_ellipse_filled(400, -20, 300, 150, arcade.color.SPACE_CADET, 0)
 arcade.draw_ellipse_filled(500, -20, 300, 150, arcade.color.SPACE_CADET, 0)
 arcade.draw_ellipse_filled(620, -20, 300, 150, arcade.color.SPACE_CADET, 0)
 
-arcade.draw_line(500, 90, 500, 300, arcade.color.CHARCOAL, 5)
-arcade.draw_line(400, 150, 600, 150, arcade.color.CHARCOAL, 5)
+arcade.draw_line(500, 90, 500, 300, arcade.color.DARK_JUNGLE_GREEN, 5)
+arcade.draw_line(400, 150, 600, 150, arcade.color.DARK_JUNGLE_GREEN, 5)
 
-arcade.draw_triangle_filled(495, 155, 100, 200, 400, 400, arcade.color.RED)
+arcade.draw_triangle_filled(496, 155, 402, 155, 496, 300, arcade.color.WHITE)
+arcade.draw_triangle_filled(503, 155, 600, 155, 503, 300, arcade.color.WHITE)
 
 #  End of render
 
