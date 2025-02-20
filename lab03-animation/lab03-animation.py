@@ -78,9 +78,9 @@ def draw_sail(x):
     arcade.draw_triangle_filled(503 - x, 155, 600 - x, 155, 503 - x, 300, arcade.color.WHITE)
 
     # Bird function
-def draw_bird(x, y):
-    arcade.draw_arc_outline(x, y, 50, 30, arcade.color.BLACK, 0, 110, 4)
-    arcade.draw_arc_outline(x + 50, y, 50, 30, arcade.color.BLACK, 70, 180, 4)
+def draw_bird(x, y, z):
+    arcade.draw_arc_outline(x, y, 50, z, arcade.color.BLACK, 0, 110, 4)
+    arcade.draw_arc_outline(x + 50, y, 50, z, arcade.color.BLACK, 70, 180, 4)
 
 def on_draw(delta_time):
     arcade.start_render()
@@ -88,11 +88,15 @@ def on_draw(delta_time):
     draw_sun()
     draw_ocean()
     draw_clouds()
-    draw_bird(200, 500)
-    draw_bird(500, 450)
-    draw_bird(100, 280)
-    draw_bird(640, 550)
+    draw_bird(on_draw.bird_x, 500, on_draw.bird_wing)
+    draw_bird(on_draw.bird_x + 300, 450, on_draw.bird_wing)
+    draw_bird(on_draw.bird_x - 100, 280, on_draw.bird_wing)
+    draw_bird(on_draw.bird_x + 440, 550, on_draw.bird_wing)
+    on_draw.bird_x += 1.2
     draw_boat(on_draw.boat_x)
+    if on_draw.bird_wing <= -10:
+        on_draw.bird_wing = 50
+    on_draw.bird_wing -= 1.5
     on_draw.boat_x -= 0.5
     draw_water_boat(on_draw.rect_x)
     on_draw.rect_x -= 0.5
@@ -111,6 +115,8 @@ on_draw.boat_x = 500
 on_draw.rect_x = 500
 on_draw.stick_x = 500
 on_draw.sail1_x = -0.5
+on_draw.bird_wing = 50
+on_draw.bird_x = 200
 
 def main():
     arcade.open_window(800, 600, "Drawing Example")
