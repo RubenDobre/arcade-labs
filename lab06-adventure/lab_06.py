@@ -186,9 +186,9 @@ def main():
             if current_room == 6 and opened == False:
                 print("Looks like the door is locked. You try pushing it, achieving nothing.")
             elif current_room == 6 and opened == True:
-                print("You find stairs. It´s a very long way down but, when you make it, you only find one door.")
-                time.sleep(1)
                 print("You open it.")
+                time.sleep(1)
+                print("You find stairs. It´s a very long way down but, when you make it, you only find one door.")
                 time.sleep(1)
                 print("It´s the treasure room, you made it!")
                 print()
